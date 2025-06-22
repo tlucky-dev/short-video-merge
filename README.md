@@ -27,7 +27,8 @@
 
 2.  **Build the Wasm Module**:
     *   Navigate to the project root directory in your terminal.
-    *   Run the command: `GOOS=js GOARCH=wasm go build -o main.wasm go/main.go`
+    *   Make sure the build script is executable: `chmod +x build.sh`
+    *   Run the command: `./build.sh`
     *   This will create/update the `main.wasm` file in the project root.
 
 3.  **Serve the Application**:
