@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Short Video Merger</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Short Video Merger</h1>
+
+    <button id="selectDirBtn">Select Directory</button>
+    <input type="file" id="dirPicker" webkitdirectory directory multiple style="display:none;">
+    <p id="dirPath">No directory selected.</p>
+    <div id="fileListArea" style="text-align: left; margin: 10px auto; max-width: 500px; max-height: 150px; overflow-y: auto; background-color: #fff; border: 1px solid #ddd; padding: 5px; display: none;">
+        <small>Files to be merged (sorted):</small>
+        <ul id="fileList" style="list-style-type: none; padding-left: 10px; margin-top: 5px;"></ul>
+    </div>
+
+    <button id="mergeBtn" style="display:none;">Merge Videos</button>
+
+    <progress id="progressBar" value="0" max="100" style="display:none;"></progress>
+    <p id="progressText"></p>
+
+    <div id="outputArea"></div>
+
+    <!--
+        IMPORTANT: wasm_exec.js is required to run Go Wasm.
+        It should be copied from your Go installation: $(go env GOROOT)/misc/wasm/wasm_exec.js
+        Place it in the same directory as this index.html file.
+    -->
+    <script src="wasm_exec.js"></script>
+    <!-- FFmpeg.wasm scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@ffmpeg/ffmpeg@0.12.15/dist/umd/ffmpeg.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

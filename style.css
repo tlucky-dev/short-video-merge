@@ -1,0 +1,114 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 1em;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+input[type="file"] {
+    /* The actual input is hidden, styled by the button that triggers it */
+}
+
+#dirPath {
+    margin: 15px 0;
+    font-style: italic;
+    color: #555;
+    min-height: 1.2em; /* Reserve space */
+}
+
+progress {
+    width: 80%;
+    max-width: 500px;
+    height: 25px;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+/* Styling for progress bar value */
+progress::-webkit-progress-value {
+    background-color: #28a745;
+    border-radius: 3px;
+}
+progress::-moz-progress-bar { /* Firefox */
+    background-color: #28a745;
+    border-radius: 3px;
+}
+progress::-ms-fill { /* IE/Edge */
+    background-color: #28a745;
+    border-radius: 3px;
+}
+
+
+#progressText {
+    margin: 10px 0;
+    font-size: 0.9em;
+    color: #333;
+    min-height: 1.2em; /* Reserve space */
+}
+
+#outputArea {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e9e9e9;
+    border-radius: 5px;
+    min-height: 40px;
+}
+
+#outputArea a {
+    font-size: 1.1em;
+    color: #007bff;
+    text-decoration: none;
+    padding: 8px 12px;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    background-color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#outputArea a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Basic responsive considerations */
+@media (max-width: 600px) {
+    body {
+        margin: 10px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    button {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+}
